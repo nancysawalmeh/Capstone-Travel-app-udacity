@@ -83,7 +83,6 @@ npm  test
 ```
 
 ## Built With
-
 - [Sass](https://sass-lang.com/documentation) - The web framework used
 - [Webpack](https://webpack.js.org/concepts/) - Asset Management
 - [Babel](https://babeljs.io/) - JavaScript Compiler
