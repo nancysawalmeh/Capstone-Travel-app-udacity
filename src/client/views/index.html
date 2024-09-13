@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel App</title>
+  </head>
+  <body style="background-color: rgb(189, 173, 187);">
+    <h1 style="text-align: center;">Capstone Travel application </h1>
+    <div class="container" style="max-width: 600px;
+    margin: 50px auto;
+    padding: 60px;
+    background-color: #fff;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  ">
+      <h1>Where are you going? And When?</h1>
+      <form class="travel-form" onsubmit="return Client.processFormSubmission(event)">
+        <div class="input-group" style="width: 100%;
+        padding: 10px;
+        font-size: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin-top: 5px;">
+          <label for="city">City</label>
+          <input type="text" name="city" id="city" />
+          <div
+          id="city-error"
+          style="color: brown;"       >
+        </div>
+        </div>
+        <div class="input-group"style="width: 100%;
+        padding: 10px;
+        font-size: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin-top: 5px;">
+          <label for="date">Date</label>
+          <input type="date" name="date" id="date" />
+          <div
+          id="date-error"
+          style="color: brown;"       >
+        </div>
+        </div>
+        <button class="submit-button">Search</button>
+      </form>
+
+      <div class="flight-data">
+        <h2 id="Rdays"></h2>
+        <p class="cityName"></p>
+        <p class="temp"></p>
+        <p class="max-temp"></p>
+        <p class="min-temp"></p>
+        <p class="weather"></p>
+        <div class="cityPic"></div>
+      </div>
+      
+    </div>
+    <script src="../../../dist/bundle.js"></script>
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker
+            .register("/service-worker.js")
+            .then((registration) => {
+              console.log(
+                "Service Worker registered with scope:",
+                registration.scope
+              );
+            })
+            .catch((error) => {
+              console.error("Service Worker registration failed:", error);
+            });
+        });
+      }
+    </script>
+  </body>
+</html>
