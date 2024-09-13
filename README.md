@@ -39,7 +39,7 @@ In most cases of personal projects, it is very common to pull basic data from an
 ## Set up environment variables:
 Create a .env file in the root directory.
 Add your API keys as follows:
-1- MY_APP_USERNAME=your_geonames_username
+1- name=your_geonames_username
 2- WEATHER_KEY=your_weatherbit_api_key
 3- PIXABAY_KEY=your_pixabay_api_key
 Updating API Keys: If you need to update the API keys in the future, edit the .env file with the new values. Make sure the .env file is not shared or included in version control to keep your keys secure.
